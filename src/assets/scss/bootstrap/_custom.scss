@@ -1,0 +1,29 @@
+$white:  #fff;
+$black:  #000;
+$red:    #c0392b;
+$orange: #e67e22;
+$yellow: #f1c40f;
+$green:  #27ae60;
+$blue:   #3498db;
+$teal:   #5bc0de;
+$pink:   #ff5b77;
+$purple: #8e44ad;
+
+// Create grayscale
+$gray-dark:                 #292b2c;
+$gray:                      #464a4c;
+$gray-light:                #636c72;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $red;
+$brand-success:             $green;
+$brand-info:                $blue;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-inverse:             $gray-dark;
+
+$component-active-color: $white;
+$component-active-bg:    $brand-primary;
+

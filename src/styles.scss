@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/bootstrap/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans|Material+Icons');
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #c0392b;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: 'Bangers', sans-serif;
+}
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+/* Pokemon Types */
+
+.type-normal {
+  background: #A8A878;
+}
+
+.type-fire {
+  background: #F08030;
+}
+
+.type-fighting {
+  background: #C03028;
+}
+
+.type-water {
+  background: #6890F0;
+}
+
+.type-flying {
+  background: #A890F0;
+}
+
+.type-grass {
+  background: #78C850;
+}
+
+.type-poison {
+  background: #A040A0;
+}
+
+.type-electric {
+  background: #F8D030;
+}
+
+.type-ground {
+  background: #E0C068;
+}
+
+.type-psychic {
+  background: #F85888;
+}
+
+.type-rock {
+  background: #B8A038;
+}
+
+.type-ice {
+  background: #98D8D8;
+}
+
+.type-bug {
+  background: #A8B820;
+}
+
+.type-dragon {
+  background: #7038F8;
+}
+
+.type-ghost {
+  background: #705898;
+}
+
+.type-dark {
+  background: #705848;
+}
+
+.type-steel {
+  background: #B8B8D0;
+}
+
+.type-fairy {
+  background: #EE99AC;
+}
+
+.type-unknown {
+  background: #68A090;
+}
