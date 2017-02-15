@@ -1,0 +1,47 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">Know Your Pokemon!</h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active">Home</a>
+            <a class="nav-link" href="#" routerLink="/about" routerLinkActive="active">About</a>
+            <a class="nav-link" href="#" routerLink="/contact" routerLinkActive="active">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="inner cover">
+        <h1 class="cover-heading text-uppercase">Know your Pokémon</h1>
+        <form>
+        <div class="input-group searchbox-container">
+          <input #searchbox id="searchbox" name="search" type="text" placeholder="Pikachu" (keyup.enter)="onSearch(searchbox.value.toLowerCase())"/>
+          <span class="input-group-btn">
+            <button class="btn btn-secondary searchbox-button" type="button">Go!</button>
+          </span>
+        </div>
+        </form>
+        <!--<div class="result-list-container">-->
+          <!--<ul class="list-group">-->
+            <!--<li class="list-group-item active result-list-item-container">-->
+              <!--<div class="list-group-item-left">-->
+                <!--<img-->
+                  <!--src="http://orig02.deviantart.net/152f/f/2012/283/6/f/16_bit_sprites__pikachu_by_toshirofrog-d5hcjfu.png"-->
+                  <!--class="list-item-image" width="64" height="64"/>-->
+                <!--<div class="list-item-text">-->
+                  <!--<span class="list-item-header">Pikachu</span>-->
+                  <!--&lt;!&ndash;<span class="list-item-subheader">A mouse Pok&eacute;mon</span>&ndash;&gt;-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<i fa [name]="'chevron-right'" [size]="2"></i>-->
+            <!--</li>-->
+            <!--<li class="list-group-item">Dapibus ac facilisis in</li>-->
+            <!--<li class="list-group-item">Morbi leo risus</li>-->
+            <!--<li class="list-group-item">Porta ac consectetur ac</li>-->
+            <!--<li class="list-group-item">Vestibulum at eros</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>

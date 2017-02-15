@@ -1,0 +1,44 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Know Your Pok&eacute;mon</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="#" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid" *ngIf="pokemon">
+  <div class="container">
+    <h1 class="display-3">Pok&eacute;dex entry for {{ pokemon?.name | capitalize }}</h1>
+  </div>
+</div>
+<div class="container poke-stats-container" *ngIf="pokemon?.forms">
+  <h2>Stats</h2>
+  <br />
+  <div class="progress" *ngFor="let _stats of pokemon.stats">
+    <div class="progress-bar bg-info" role="progressbar" [style.width]="_stats.base_stat + '%'" [attr.aria-valuenow]="_stats.base_stat" aria-valuemin="0" aria-valuemax="100">{{_stats.base_stat}} {{_stats.stat.name | capitalize }}</div>
+  </div>
+  <br />
+  <h2>Forms</h2>
+  <br />
+  <div class="card-group">
+      <div class="card" *ngFor="let _forms of pokemon.forms">
+        <h3 class="card-header" *ngIf="_forms.names?.length > 0">{{ _forms.names[0].name | capitalize }}</h3>
+        <h3 class="card-header" *ngIf="_forms.url == undefined && _forms.names?.length < 1">{{ _forms.name | capitalize }}</h3>
+        <div class="card-block">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+  </div>
+</div>

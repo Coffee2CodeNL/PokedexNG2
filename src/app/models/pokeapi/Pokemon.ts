@@ -6,6 +6,7 @@ import {PokemonMove} from './PokemonMove';
 import {PokemonSprites} from './PokemonSprites';
 import {PokemonStat} from './PokemonStat';
 import {PokemonType} from './PokemonType';
+import {PokemonForm} from "./PokemonForm";
 /**
  * Created by resco on 30-1-2017.
  */
@@ -18,7 +19,7 @@ export class Pokemon {
   order: number;
   weight: number;
   abilities: PokemonAbility[];
-  forms: NamedAPIResource[];
+  forms: any;
   game_indices: VersionGameIndex[];
   held_items: PokemonHeldItem[];
   location_area_encounters: string;

@@ -7,29 +7,21 @@ import {
   transition,
   animate
 } from '@angular/core';
+import { FaDirective } from 'angular2-fontawesome/src/fa.directive';
 import {PokeAPIService} from './services/pokeapi.service';
 import {Pokemon} from './models/pokeapi/Pokemon';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['app.component.scss'],
   animations: []
 })
 
 export class AppComponent implements OnInit, AfterViewInit {
-  pokemon: Pokemon;
-  errorMessage: string;
-
-  constructor(private pokeApi: PokeAPIService) {
-  }
-
   ngOnInit(): void {
-    this.pokeApi.getPokemon().then(
-      pokemon => this.pokemon = pokemon,
-      error   => this.errorMessage = <any>error
-    );
   }
+
 
   ngAfterViewInit(): void {
 

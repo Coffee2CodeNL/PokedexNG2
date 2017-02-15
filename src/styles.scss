@@ -1,6 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'assets/scss/bootstrap/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans|Material+Icons');
+
+$enable-flex: true;
+$white:  #fff;
+$black:  #000;
+$red:    #c0392b;
+$orange: #e67e22;
+$yellow: #f1c40f;
+$green:  #27ae60;
+$blue:   #3498db;
+$teal:   #5bc0de;
+$pink:   #ff5b77;
+$purple: #8e44ad;
+
+// Create grayscale
+$gray-dark:                 #292b2c;
+$gray:                      #464a4c;
+$gray-light:                #636c72;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
+
+// Reassign color vars to semantic color scheme
+$brand-primary:             $red;
+$brand-success:             $green;
+$brand-info:                $blue;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-inverse:             $gray-dark;
+
+$component-active-color:    $white;
+$component-active-bg:       $brand-primary;
+$list-group-bg:             #e74c3c;
+$card-bg:                   #e74c3c;
+$card-cap-bg:               lighten($card-bg, 10%);
+$jumbotron-bg:              lighten($card-bg, 10%);
+
+// Core variables and mixins
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Reset and dependencies
+@import "~bootstrap/scss/normalize";
+@import "~bootstrap/scss/print";
+
+// Core CSS
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+
+// Components
+//@import "~bootstrap/scss/animation";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+//@import "~bootstrap/scss/tags";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/responsive-embed";
+@import "~bootstrap/scss/close";
+
+// Components w/ JavaScript
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+
+// Utility classes
+@import "~bootstrap/scss/utilities";
 
 /*
  * Base structure
@@ -9,94 +89,16 @@
 html,
 body {
   height: 100%;
-  background-color: #c0392b;
+  background-color: $brand-primary;
 }
 body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-  font-family: 'Bangers', sans-serif;
+  color: $white;
 }
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-/* Pokemon Types */
-
-.type-normal {
-  background: #A8A878;
+a {
+  &:focus,
+  &:hover {
+    color: #fff;
+  }
 }
 
-.type-fire {
-  background: #F08030;
-}
-
-.type-fighting {
-  background: #C03028;
-}
-
-.type-water {
-  background: #6890F0;
-}
-
-.type-flying {
-  background: #A890F0;
-}
-
-.type-grass {
-  background: #78C850;
-}
-
-.type-poison {
-  background: #A040A0;
-}
-
-.type-electric {
-  background: #F8D030;
-}
-
-.type-ground {
-  background: #E0C068;
-}
-
-.type-psychic {
-  background: #F85888;
-}
-
-.type-rock {
-  background: #B8A038;
-}
-
-.type-ice {
-  background: #98D8D8;
-}
-
-.type-bug {
-  background: #A8B820;
-}
-
-.type-dragon {
-  background: #7038F8;
-}
-
-.type-ghost {
-  background: #705898;
-}
-
-.type-dark {
-  background: #705848;
-}
-
-.type-steel {
-  background: #B8B8D0;
-}
-
-.type-fairy {
-  background: #EE99AC;
-}
-
-.type-unknown {
-  background: #68A090;
-}

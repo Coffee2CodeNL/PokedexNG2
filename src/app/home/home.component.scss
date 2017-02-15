@@ -1,8 +1,100 @@
+/* Pokemon Types */
+$type-normal: #A8A878;
+$type-fire: #F08030;
+$type-fighting: #C03028;
+$type-water: #6890F0;
+$type-flying: #A890F0;
+$type-grass: #78C850;
+$type-poison: #A040A0;
+$type-electric: #F8D030;
+$type-ground: #E0C068;
+$type-psychic: #F85888;
+$type-rock: #B8A038;
+$type-ice: #98D8D8;
+$type-bug: #A8B820;
+$type-dragon: #7038F8;
+$type-ghost: #705898;
+$type-dark: #705848;
+$type-steel: #B8B8D0;
+$type-fairy: #EE99AC;
+$type-unknown: #68A090;
+
 /*
  * Globals
  */
+h1, button {
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: 'Bangers', sans-serif;
+}
+.result-list-item-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
 
+.result-list-container {
+  padding: 25px;
+  background-color: lighten(#e74c3c, 5%);
+  box-shadow: inset 0 0 35px 0 rgba(51,51,51,0.3);
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: none;
+  margin-top: 25px;
+  border-radius: 4px;
+}
 
+i.fa  {
+  vertical-align: middle;
+  align-self: center;
+  color: lighten(#e74c3c, 10%);
+  transition: color 500ms;
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+
+.list-group-item-left {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+.list-item-text {
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  display: flex;
+  padding-left: 10px;
+}
+
+.list-item-header {
+  font-size: 26pt;
+}
+
+.list-item-subheader {
+  font-size: 10pt;
+}
+
+.list-item-type-markers {
+  width: 100px;
+  vertical-align: top;
+  background-color: #5bc0de;
+}
+@mixin list-item-background($color1, $color2: null) {
+  @if($color2) {
+    background-image: linear-gradient(to right, $color1 50%, $color2 50%, $color2 50%);
+  } @else {
+    background-color: $color1;
+  }
+}
+.list-item-image-electric {
+  @include list-item-background($type-electric);
+  border-radius: 10px;
+}
+.list-item-image-water {
+  @include list-item-background($type-water);
+  border-radius: 10px;
+}
 
 /* Custom default button */
 .btn-secondary,
@@ -13,7 +105,19 @@
   background-color: #fff;
   border: .05rem solid #fff;
 }
-
+.searchbox-container {
+  justify-content: center;
+}
+.searchbox-button {
+  color: #FFFFFF;
+  background: lighten(#e74c3c, 10%);
+  border: 0;
+  &:hover {
+    border: 0;
+    color: lighten(#e74c3c, 10%);
+    background: #FFFFFF;
+  }
+}
 #searchbox {
   border: none;
   font-family: 'Bangers', sans-serif;
@@ -22,7 +126,6 @@
   text-align: center;
   border-radius: 2px;
   font-size: 42pt;
-  width: 500px;
 }
 
 .cover-heading {
